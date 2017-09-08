@@ -1,0 +1,4 @@
+This program flattens a binary tree into a doubly linked list without allocating any new memory.
+
+Input:  Pointer to the root of the tree
+Output: Pointer to the head of the list
