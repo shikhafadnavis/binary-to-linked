@@ -42,14 +42,31 @@ node* findNode(node* root, int value)
 		}
 		else
 		{
-			findNode(root->pLeft, value);
-			findNode(root->pRight, value);
+			return findNode(root->pLeft, value);
+			return findNode(root->pRight, value);
 	
 		}
 
 	}
 	
 
+
+}
+
+void inorder(node* root)
+{
+	if (root != NULL)
+	{
+		inorder(root->pLeft);
+		printf("\n%d", root->data);
+		inorder(root->pRight);
+
+	}
+
+	else
+	{
+		return;
+	} 
 
 }
 /*
@@ -85,12 +102,11 @@ int main()
 	root->pRight->pLeft = insertNode(5);
 	root->pRight->pRight = insertNode(6);
 	resultNode = findNode(root, 4);
-	if (resultNode)
-	{
-		printf("heyyyy");
-	}
+
+	inorder(root);
 	
 	
+		
 
 	return 0;
 
