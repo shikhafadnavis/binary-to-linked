@@ -100,6 +100,7 @@ int main()
 		inorderArr[i] = NULL;
 	}
 
+	// create a binary tree
 	node* root = insertNode(1);
 	root->pLeft = insertNode(2);
 	root->pRight = insertNode(3);
